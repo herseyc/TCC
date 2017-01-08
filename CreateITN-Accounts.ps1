@@ -1,12 +1,13 @@
 ### Script to create user accounts in Classroom AD ######
 
+#CSV Name, Email exported from SIS Class Roster
 $users = Import-Csv -Delimiter "," -Path "C:\Scripts\fall2016.csv"
 
-$description = "ITN255 - Spring 2017 - Hersey Cartwright"
-$server = "classroom.local"
-$password = "Set Temp Password"
-$ou = "ou=HC-S2017,ou=ITN255,ou=Class,dc=classroom,dc=local"
-$group = "ITN255"
+$description = "ITN255 - Spring 2017 - Hersey Cartwright" # Class - Semester - Instructor
+$server = "classroom.local" # Domain
+$password = "Set Temp Password" # Temporary Password - Must be changed at first login
+$ou = "ou=HC-S2017,ou=ITN255,ou=Class,dc=classroom,dc=local" # Class OU
+$group = "ITN255" # Group for View Desktop Entitlement
 
 foreach ($user in $users) {
 
