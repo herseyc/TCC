@@ -1,3 +1,4 @@
+#Called by LABDT1 Rename to rename LABDT1 Desktop
 param (
    [string]$computername
 )
